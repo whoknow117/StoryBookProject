@@ -9,16 +9,16 @@ export type RatingPropsType = {
     setValue: (value: ValuesType) => void
 }
 
-const Rating: React.FC<RatingPropsType> = ({setValue,value}) => {
+const Rating: React.FC<RatingPropsType> = ({setValue, value}) => {
 
 
     return <div className={classes.rating}>
 
-        <Star  setValue={setValue} active={value > 0} value={1}/>
+        <Star setValue={setValue} active={value > 0} value={1}/>
         <Star setValue={setValue} active={value > 1} value={2}/>
-        <Star  setValue={setValue} active={value > 2} value={3}/>
+        <Star setValue={setValue} active={value > 2} value={3}/>
         <Star setValue={setValue} active={value > 3} value={4}/>
-        <Star  setValue={setValue} active={value > 4} value={5}/>
+        <Star setValue={setValue} active={value > 4} value={5}/>
     </div>
 }
 
