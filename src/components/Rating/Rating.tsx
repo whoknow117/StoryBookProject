@@ -6,19 +6,20 @@ import {ValuesType} from "../../App";
 
 export type RatingPropsType = {
     value: ValuesType
-    setValue: (value: ValuesType) => void
+    onClick: (value: ValuesType) => void
 }
 
-const Rating: React.FC<RatingPropsType> = ({setValue, value}) => {
+const Rating: React.FC<RatingPropsType> = ({onClick, value}) => {
+
 
 
     return <div className={classes.rating}>
 
-        <Star setValue={setValue} active={value > 0} value={1}/>
-        <Star setValue={setValue} active={value > 1} value={2}/>
-        <Star setValue={setValue} active={value > 2} value={3}/>
-        <Star setValue={setValue} active={value > 3} value={4}/>
-        <Star setValue={setValue} active={value > 4} value={5}/>
+        <Star selected={value > 0} onClick={onClick}  value={1} />
+        <Star selected={value > 1} onClick={onClick}  value={2}/>
+        <Star selected={value > 2} onClick={onClick}  value={3} />
+        <Star selected={value > 3} onClick={onClick}  value={4} />
+        <Star selected={value > 4} onClick={onClick}  value={5}/>
     </div>
 }
 
