@@ -54,6 +54,11 @@
   height: 4px;
   border-right: 1px solid #000;
   border-top: 1px solid #000;
-  transition: .2s;
+  transition: .5s;
   transform: rotate(45deg);
+}
+
+.activeItem {
+  background: #29283e;
+  color: #fff;
 }

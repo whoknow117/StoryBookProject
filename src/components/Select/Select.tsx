@@ -41,9 +41,12 @@ const Select: React.FC<SelectPropsType> = ( ) => {
 
          <div className={classes.items}>
              {collapsed ? '' : menu.map( item => {
-                 if(item.title !== select) {
-                     return <div onClick={() => {selectCallback(item.title)}} className={classes.item}>{item.title}</div>
+                 if(item.title === select) {
+                     return <div onClick={() => {selectCallback(item.title)}} className={`${classes.item} ${classes.activeItem}`}>{item.title}</div>
+                 } else if(item.title !== select) {
+                     return <div onClick={() => {selectCallback(item.title)}} className={`${classes.item}`}>{item.title}</div>
                  }
+
                  return;
              })}
          </div>
